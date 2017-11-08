@@ -1,0 +1,18 @@
+# mkinitcpio preset file for the 'linux-vfio' package
+
+ALL_config="/etc/mkinitcpio-vfio.conf"
+ALL_kver="/boot/EFI/arch/vmlinuz-linux-vfio"
+
+PRESETS=('default' 'fallback')
+
+default_config="/etc/mkinitcpio-vfio.conf"
+default_image="/boot/EFI/arch/initramfs-linux-vfio.img"
+#default_options=""
+CONFIG_FB_EFI=y
+CONFIG_FRAMEBUFFER_CONSOLE=y
+CONFIG_EFI=y
+CONFIG_EFI_VARS=y
+
+fallback_config="/etc/mkinitcpio.conf"
+fallback_image="/boot/EFI/arch/initramfs-linux-vfio-fallback.img" 
+fallback_options="-S autodetect"

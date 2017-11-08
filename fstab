@@ -1,0 +1,24 @@
+# __INTERNAL DEVICES__
+# --- /dev/sda ---
+# /dev/sda2
+/dev/sda2           	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda1
+/dev/sda1           	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# /dev/sda3
+/dev/sda3           	/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# __FILES__
+# efivarfs
+efivarfs            	/sys/firmware/efi/efivars	efivarfs  	rw,nosuid,nodev,noexec,relatime	0 0
+
+# /swapfile
+/swapfile		none		swap		defaults	0 0
+
+# /dev/hugepages
+hugetlbfs		/dev/hugepages	hugetlbfs	mode=1770,gid=78	0 0
+
+# __EXTERNAL DEVICES__
+# /dev/sdb
+/dev/sdb1		/mnt/backup	ext4		defaults,nofail,x-systemd.device-timeout=1	0 2

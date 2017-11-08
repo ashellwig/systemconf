@@ -1,0 +1,6 @@
+.include /usr/lib/systemd/system/netctl@.service
+
+[Unit]
+Description=BASIC
+BindsTo=sys-subsystem-net-devices-enp2s0.device
+After=sys-subsystem-net-devices-enp2s0.device
